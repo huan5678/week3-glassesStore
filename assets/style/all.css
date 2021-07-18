@@ -2373,7 +2373,7 @@ body {
   display: block;
   width: 5rem;
   height: 3.0625rem;
-  background-image: url(/assets/images/logo.png);
+  background-image: url(../images/logo.png);
   background-repeat: no-repeat;
   background-size: cover;
   text-indent: 101%;
