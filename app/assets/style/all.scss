@@ -1,23 +1,117 @@
-$color: #00cc99;
+@import "reset";
+@import "breakpoint";
+
+@import "colors";
+@import "space";
+@import "grid";
+@import "fontSet";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,900&display=swap');
+
+@font-face {
+  font-family: 'Roboto';
+  unicode-range: U+000-5FF, U+1e00-1fff, U+2000-2300;
+}
+
+body {
+  font-family: 'Roboto','Noto Sans TC', sans-serif;
+}
+
 
 .header {
-  height: 200px;
-  background-color: #00cc99;
+  padding: 1.875rem 5.5rem;
+  color: $white;
+  background-color: $main;
+  @include pad {
+    padding: 1.875rem 0;
+  }
+  @include mobile {
+    padding-top: 0.625rem;
+    padding-bottom: 0;
+  }
+}
+.logo a{
+  display: block;
+  width: 5rem;
+  height: 3.0625rem;
+  background-image: url(/assets/images/logo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+  @include mobile{
+    width: 3rem;
+    height: 1.8125rem;
+    margin-bottom: 0.625rem;
+  }
 }
 
 .footer {
-  height: 200px;
-  background-color: #00cc99;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: $white;
+  background-color: $main;
 }
 
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  display: flex;
-  transition: all 0.5s;
-  &:hover {
-    width: 200px;
-    background-color: $color;
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  @include pad {
+    max-width: 690px;
   }
+  @include mobile {
+    max-width: 345px;
+  }
+  &-sm-none {
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+}
+
+.link-white {
+  text-decoration: none;
+  color: $white;
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+  @include pad {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.border-sm {
+  @include mobile {
+    border: 1px solid;
+  }
+}
+
+.border-bottom {
+  border-bottom: 1px solid;
+}
+
+.border-white {
+  border-color: $white;
+}
+
+.hide {
+  display: none;
+}
+.hide-md {
+  @include pad {
+    display: none;
+  }
+}
+.hide-sm {
+  @include mobile {
+    display: none;
+  }
+}
+.text-center {
+  text-align: center;
 }

@@ -1,0 +1,39 @@
+$main: #AA0601;
+$main-border: #9F1213;
+$secondary: #650300;
+$gray: #555555;
+$border-light: #00000020;
+$white: #fff;
+$black: #000;
+$light: #6C6C6C;
+
+$theme-color: (
+  primary:  $main,
+  secondary: $secondary,
+  white: $white,
+  black: $black,
+  gray: $gray,
+  light: $light
+);
+
+$border-color: (
+    main: $main-border,
+    gray: $gray,
+    light: $border-light
+);
+
+
+@each $theme, $color in $theme-color{
+  .text-#{$theme}{
+    color: #{$color};
+  };
+  .bg-#{$theme}{
+    background-color: #{$color};
+  }
+};
+
+@each $border, $color in $border-color{
+    .border-#{$border}{
+        border-color: #{$color};
+    };
+}
