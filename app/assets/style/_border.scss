@@ -1,0 +1,22 @@
+@each $border,
+$color in $border-color {
+	.border-#{$border} {
+		border-color: #{$color};
+	}
+
+	;
+}
+
+@each $loc in $borderLoc {
+	@each $size, $val in $borderSize {
+		@if $size != 'null' {
+			.border-#{$loc}-#{$size} {
+				border-#{$loc}-width: #{$val} solid;
+			}
+		} @else {
+			.border-#{$size}{
+				border-width: #{$val} solid;
+			}
+		}
+	}
+}

@@ -1,16 +1,4 @@
-$sizer: 1rem !default;
-$sizes: (
-  bs: $sizer,
-  1: $sizer * 4,
-  2: $sizer * 3,
-  3: $sizer * 2.625,
-  4: $sizer * 2.25,
-  5: $sizer * 2,
-  6: $sizer * 1.5,
-  7: $sizer * 1.25,
-  8: $sizer * 1.125,
-  9: $sizer * 0.875
-);
+
 
 @each $size, $sizeamount in $sizes{
   .fs-#{$size}{
