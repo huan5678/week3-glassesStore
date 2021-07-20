@@ -1,133 +1,182 @@
-$gutter-width:30px;
-$grid-num:12;
 
-@for $i from 1 through $grid-num{
-  .col-#{$i}{
-    gap: $gutter-width;
-    width: 100% * ($i / $grid-num );
-    @include pad{
-      width: 100% * ($i / $grid-num ) /2;
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding-left: $gutter-width / 2;
+    padding-right: $gutter-width / 2;
+
+    @include pad {
+        max-width: 690px;
     }
-    @include mobile{
-        width: 100%;
+
+    @include mobile {
+        max-width: 345px;
     }
-  }
+
+    &-sm-none {
+        @include mobile {
+            max-width: 100%;
+        }
+    }
 }
 
-$flex-directionVal: (row, column, row-reverse, column-reverse);
+.container-fluid {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $gutter-width / 2;
+    padding-right: $gutter-width / 2;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -($gutter-width / 2);
+    margin-right: -($gutter-width / 2);
+    &--gutters {
+        column-gap: $gutter-width;
+    }
+}
+
+.no-gutters {
+    margin-left: 0px;
+    margin-right: 0px;
+
+    >[class*='col-'] {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+@for $i from 1 through $grid-num {
+    .col-#{$i} {
+        max-width: 100% * ($i / $grid-num);
+        flex: 0 0 (100% * ($i / $grid-num));
+    }
+}
+
+@include pad {
+    @for $i from 1 through $grid-num {
+        .col-md-#{$i} {
+            max-width: 100% * ($i / $grid-num);
+            flex: 0 0 (100% * ($i / $grid-num));
+        }
+    }
+}
+
+@include mobile {
+    @for $i from 1 through $grid-num {
+        .col-sm-#{$i} {
+            max-width: 100% * ($i / $grid-num);
+            flex: 0 0 (100% * ($i / $grid-num));
+        }
+    }
+}
+
+
 
 @each $flex in $flex-directionVal {
-    .flex-#{$flex}{
+    .flex-#{$flex} {
         flex-direction: $flex;
     }
 }
+
 @each $flex in $flex-directionVal {
-    @include pad{
-    .flex-md-#{$flex}{
-            flex-direction: $flex;
-        }
-    }
-}
-@each $flex in $flex-directionVal {
-    @include mobile{
-    .flex-sm-#{$flex}{
+    @include pad {
+        .flex-md-#{$flex} {
             flex-direction: $flex;
         }
     }
 }
 
-$wrapVal: (wrap, nowrap, wrap-reverse);
+@each $flex in $flex-directionVal {
+    @include mobile {
+        .flex-sm-#{$flex} {
+            flex-direction: $flex;
+        }
+    }
+}
+
+
 
 @each $flex in $wrapVal {
-    .flex-#{$flex}{
+    .flex-#{$flex} {
         flex-wrap: $flex;
     }
 }
+
 @each $flex in $wrapVal {
-    @include pad{
-        .flex-md-#{$flex}{
-            flex-wrap: $flex;
-        }
-    }
-}
-@each $flex in $wrapVal {
-    @include mobile{
-        .flex-sm-#{$flex}{
+    @include pad {
+        .flex-md-#{$flex} {
             flex-wrap: $flex;
         }
     }
 }
 
+@each $flex in $wrapVal {
+    @include mobile {
+        .flex-sm-#{$flex} {
+            flex-wrap: $flex;
+        }
+    }
+}
 
-$justify-contentVal: (
-    start: flex-start,
-    end: flex-end,
-    center: center,
-    between: space-between,
-    around: space-around,
-    evenly: space-evenly,
-);
-
-@each $jc, $val in $justify-contentVal {
-    .justify-#{$jc}{
+@each $jc,
+$val in $justify-contentVal {
+    .justify-#{$jc} {
         justify-content: #{$val};
     }
 }
 
-$displayVal: (flex, block, inline, inline-block);
-
 @each $dp in $displayVal {
-    .d-#{$dp}{
+    .d-#{$dp} {
         display: #{$dp};
     }
 }
+
 @each $dp in $displayVal {
-    @include pad{
-        .d-md-#{$dp}{
-            display: #{$dp};
-        }
-    }
-}@each $dp in $displayVal {
-    @include mobile{
-        .d-sm-#{$dp}{
+    @include pad {
+        .d-md-#{$dp} {
             display: #{$dp};
         }
     }
 }
 
-$itemsVal: (
-    start: flex-start,
-    end: flex-end,
-    center: center,
-    baseline: baseline,
-    stretch: stretch,
-);
+@each $dp in $displayVal {
+    @include mobile {
+        .d-sm-#{$dp} {
+            display: #{$dp};
+        }
+    }
+}
 
-@each $its, $val in $itemsVal {
-    .items-#{$its}{
+@each $its,
+$val in $itemsVal {
+    .items-#{$its} {
         align-items: #{$val};
     }
 }
-@each $its, $val in $itemsVal {
+
+@each $its,
+$val in $itemsVal {
     @include pad {
-        .items-md-#{$its}{
-            align-items: #{$val};
-        }
-    }
-}
-@each $its, $val in $itemsVal {
-    @include mobile {
-        .items-sm-#{$its}{
+        .items-md-#{$its} {
             align-items: #{$val};
         }
     }
 }
 
-$alignVal: (baseline, top, middle, bottom, text-bottom, text-top);
+@each $its,
+$val in $itemsVal {
+    @include mobile {
+        .items-sm-#{$its} {
+            align-items: #{$val};
+        }
+    }
+}
 
 @each $ag in $alignVal {
-    .align-#{$ag}{
+    .align-#{$ag} {
         vertical-align: $ag;
     }
 }
-

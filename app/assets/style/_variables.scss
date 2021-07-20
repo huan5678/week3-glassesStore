@@ -1,0 +1,127 @@
+
+$main: #AA0601;
+$main-border: #9F1213;
+$secondary: #650300;
+$gray: #555555;
+$border-light: #DCDCDC;
+$white: #fff;
+$black: #000;
+$light: #F2F2F2;
+$gray-light: #6C6C6C;
+
+$theme-color: (
+  primary:  $main,
+  secondary: $secondary,
+  white: $white,
+  black: $black,
+  gray: $gray,
+  light: $light,
+  gray-light: $gray-light,
+);
+
+$border-color: (
+    main: $main-border,
+    gray: $gray,
+    light: $border-light
+);
+
+$borderLoc:(null, top, right, bottom, left);
+
+$borderSize:(
+  0: 0px,
+  null: 1px,
+  1: 4px,
+  2: 8px,
+  3: 3px,
+);
+
+
+$gutter-width:30px;
+$grid-num:12;
+
+$spacer: 1rem !default;
+$spacers: (
+  auto: auto,
+  0: 0,
+  1: $spacer * 0.5,
+  2: $spacer,
+  m: $spacer * 1.25,
+  3: $spacer * 1.5,
+  4: $spacer * 2,
+  5: $spacer * 2.25,
+  6: $spacer * 2.5,
+  7: $spacer * 2.875,
+  8: $spacer * 3,
+  9: $spacer * 3.125,
+  10: $spacer * 3.5,
+  11: $spacer * 4,
+  12: $spacer * 5,
+  13: $spacer * 6,
+  xl: $spacer * 10,
+) !default;
+
+$sides: (
+    '': null,
+    't': top,
+    'b': bottom,
+    'l': left,
+    'r': right
+    ) !default;
+
+
+$flex-directionVal: (row, column, row-reverse, column-reverse) !default;
+
+$wrapVal: (wrap, nowrap, wrap-reverse) !default;
+
+$justify-contentVal: (
+    start: flex-start,
+    end: flex-end,
+    center: center,
+    between: space-between,
+    around: space-around,
+    evenly: space-evenly,
+) !default;
+
+$displayVal: (flex, block, inline, inline-block, none) !default;
+
+$itemsVal: (
+    start: flex-start,
+    end: flex-end,
+    center: center,
+    baseline: baseline,
+    stretch: stretch,
+) !default;
+
+$alignVal: (baseline, top, middle, bottom, text-bottom, text-top) !default;
+
+$widthVal: (
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%,
+  auto: auto
+);
+
+$sizer: 1rem !default;
+$sizes: (
+  bs: $sizer,
+  1: $sizer * 4,
+  2: $sizer * 3,
+  3: $sizer * 2.625,
+  4: $sizer * 2.25,
+  5: $sizer * 2,
+  6: $sizer * 1.5,
+  7: $sizer * 1.25,
+  8: $sizer * 1.125,
+  9: $sizer * 0.875
+);
+
+$weightVal: (
+  base: 400,
+  bold: 500,
+  bolder: 700,
+  black: 900,
+);
+
+$pos: (static, relative, absolute, fixed, sticky);
+

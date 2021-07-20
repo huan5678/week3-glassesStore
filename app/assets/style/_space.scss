@@ -1,37 +1,23 @@
-$spacer: 1rem !default;
-$spacers: (
-  auto: auto,
-  0: 0,
-  1: $spacer * 0.5,
-  2: $spacer,
-  3: $spacer * 1.5,
-  4: $spacer * 2,
-  5: $spacer * 2.25,
-  6: $spacer * 2.5,
-  7: $spacer * 2.875,
-  8: $spacer * 3,
-  9: $spacer * 3.125,
-  10: $spacer * 4,
-);
-$sides: (top, bottom, left, right); // Leave this variable alone
+
+
 @each  $space, $spaceamount in $spacers {
- @each $side in $sides {
-   .m#{str-slice($side, 0, 1)}-#{$space} {
-     margin-#{$side}: #{$spaceamount};
-   } 
-   .p#{str-slice($side, 0, 1)}-#{$space} {
-     padding-#{$side}: #{$spaceamount};
-   }
+ @each $val, $side in $sides {
+     .m#{$val}-#{$space} {
+       margin-#{$side}: #{$spaceamount};
+     }
+     .p#{$val}-#{$space} {
+       padding-#{$side}: #{$spaceamount};
+     }
   }
 }
 @each  $space, $spaceamount in $spacers {
-  @each $side in $sides {
+  @each $val, $side in $sides {
     @include pad {
-    .m#{str-slice($side, 0, 1)}-md-#{$space} {
+    .m#{$val}-md-#{$space} {
         margin-#{$side}: #{$spaceamount};
     }
 
-    .p#{str-slice($side, 0, 1)}-md-#{$space} {
+    .p#{$val}-md-#{$space} {
         padding-#{$side}: #{$spaceamount};
     }
    }
@@ -39,12 +25,12 @@ $sides: (top, bottom, left, right); // Leave this variable alone
 }
 
 @each  $space, $spaceamount in $spacers {
-  @each $side in $sides {
+  @each $val, $side in $sides {
     @include mobile {
-    .m#{str-slice($side, 0, 1)}-sm-#{$space} {
+    .m#{$val}-sm-#{$space} {
         margin-#{$side}: #{$spaceamount};
       }
-      .p#{str-slice($side, 0, 1)}-sm-#{$space} {
+      .p#{$val}-sm-#{$space} {
           padding-#{$side}: #{$spaceamount};
         }
       }
@@ -134,14 +120,6 @@ $sides: (top, bottom, left, right); // Leave this variable alone
   }
 }
 
-$widthVal: (
-  25: 25%,
-  50: 50%,
-  75: 75%,
-  100: 100%,
-  auto: auto
-);
-
 @each $width, $val in $widthVal {
   .w-#{$width}{
     width: #{$val};
@@ -154,6 +132,26 @@ $widthVal: (
   @include mobile{
     .w-sm-#{$width}{
       width: #{$val};
+    }
+  }
+}
+
+@each $posit in $pos {
+  .pos-#{$posit}{
+    position: #{$posit};
+  }
+}
+@include pad {
+  @each $posit in $pos {
+    .pos-md-#{$posit}{
+      position: #{$posit};
+    }
+  }
+}
+@include mobile {
+  @each $posit in $pos {
+    .pos-sm-#{$posit}{
+      position: #{$posit};
     }
   }
 }
