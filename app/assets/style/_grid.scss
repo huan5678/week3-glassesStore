@@ -33,7 +33,7 @@
     flex-wrap: wrap;
     margin-left: -($gutter-width / 2);
     margin-right: -($gutter-width / 2);
-    &--gutters {
+    &--gap {
         column-gap: $gutter-width;
     }
 }
@@ -48,8 +48,11 @@
     }
 }
 
+
 @for $i from 1 through $grid-num {
     .col-#{$i} {
+        padding-left: $gutter-width/2;
+        padding-right: $gutter-width/2;
         max-width: 100% * ($i / $grid-num);
         flex: 0 0 (100% * ($i / $grid-num));
     }
@@ -58,6 +61,8 @@
 @include pad {
     @for $i from 1 through $grid-num {
         .col-md-#{$i} {
+            padding-left: $gutter-width/2;
+            padding-right: $gutter-width/2;
             max-width: 100% * ($i / $grid-num);
             flex: 0 0 (100% * ($i / $grid-num));
         }
@@ -67,6 +72,8 @@
 @include mobile {
     @for $i from 1 through $grid-num {
         .col-sm-#{$i} {
+            padding-left: $gutter-width/2;
+            padding-right: $gutter-width/2;
             max-width: 100% * ($i / $grid-num);
             flex: 0 0 (100% * ($i / $grid-num));
         }
@@ -180,3 +187,71 @@ $val in $itemsVal {
         vertical-align: $ag;
     }
 }
+
+
+
+@each  $space, $spaceamount in $spacers {
+    .gap-#{$space} {
+      gap: #{$spaceamount};
+    }
+  }
+  
+  @each  $space, $spaceamount in $spacers {
+    .gap-md-#{$space} {
+      @include pad {
+        gap: #{$spaceamount};
+      }
+    }
+  }
+  
+  @each  $space, $spaceamount in $spacers {
+    .gap-sm-#{$space} {
+      @include mobile {
+        gap: #{$spaceamount};
+       }
+    }
+  }
+
+  @each  $space, $spaceamount in $spacers {
+    .row-gap-#{$space} {
+      row-gap: #{$spaceamount};
+    }
+  }
+  
+  @each  $space, $spaceamount in $spacers {
+    .row-gap-md-#{$space} {
+      @include pad {
+        row-gap: #{$spaceamount};
+      }
+    }
+  }
+  
+  @each  $space, $spaceamount in $spacers {
+    .row-gap-sm-#{$space} {
+      @include mobile {
+        row-gap: #{$spaceamount};
+       }
+    }
+  }
+
+  @each  $space, $spaceamount in $spacers {
+    .column-gap-#{$space} {
+      column-gap: #{$spaceamount};
+    }
+  }
+  
+  @each  $space, $spaceamount in $spacers {
+    .column-gap-md-#{$space} {
+      @include pad {
+        column-gap: #{$spaceamount};
+      }
+    }
+  }
+  
+  @each  $space, $spaceamount in $spacers {
+    .column-gap-sm-#{$space} {
+      @include mobile {
+        column-gap: #{$spaceamount};
+       }
+    }
+  }

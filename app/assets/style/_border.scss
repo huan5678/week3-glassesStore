@@ -10,9 +10,16 @@ $color in $border-color {
 @each $loc in $borderLoc {
 	@each $size, $val in $borderSize {
 		@if $loc != null {
-			.border-#{$loc}-#{$size} {
-				border-style: solid;
-				border-#{$loc}-width: #{$val};
+			@if $size != null{
+				.border-#{$loc}-#{$size} {
+					border-style: solid;
+					border-#{$loc}-width: #{$val};
+				}
+			} @else {
+				.border-#{$loc}{
+					border-style: solid;
+					border-#{$loc}-width: #{$val};
+				}
 			}
 		} @else {
 			@if $size != null {
@@ -34,9 +41,16 @@ $color in $border-color {
 	@each $loc in $borderLoc {
 		@each $size, $val in $borderSize {
 			@if $loc != null {
-				.border-md-#{$loc}-#{$size} {
-					border-style: solid;
-					border-#{$loc}-width: #{$val};
+				@if $size != null{
+					.border-md-#{$loc}-#{$size} {
+						border-style: solid;
+						border-#{$loc}-width: #{$val};
+					}
+				} @else {
+					.border-md-#{$loc}{
+						border-style: solid;
+						border-#{$loc}-width: #{$val};
+					}
 				}
 			} @else {
 				@if $size != null {
@@ -59,9 +73,16 @@ $color in $border-color {
 	@each $loc in $borderLoc {
 		@each $size, $val in $borderSize {
 			@if $loc != null {
-				.border-sm-#{$loc}-#{$size} {
-					border-style: solid;
-					border-#{$loc}-width: #{$val};
+				@if $size != null{
+					.border-sm-#{$loc}-#{$size} {
+						border-style: solid;
+						border-#{$loc}-width: #{$val};
+					}
+				} @else {
+					.border-sm-#{$loc}{
+						border-style: solid;
+						border-#{$loc}-width: #{$val};
+					}
 				}
 			} @else {
 				@if $size != null {

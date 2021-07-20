@@ -2,40 +2,67 @@
 
 @each  $space, $spaceamount in $spacers {
  @each $val, $side in $sides {
+   @if $side != null{
      .m#{$val}-#{$space} {
        margin-#{$side}: #{$spaceamount};
      }
      .p#{$val}-#{$space} {
        padding-#{$side}: #{$spaceamount};
      }
+   } @else {
+      .m-#{$space} {
+        margin: #{$spaceamount};
+      }
+      .p-#{$space} {
+        padding: #{$spaceamount};
+      }
+   }
   }
 }
+
 @each  $space, $spaceamount in $spacers {
   @each $val, $side in $sides {
     @include pad {
-    .m#{$val}-md-#{$space} {
-        margin-#{$side}: #{$spaceamount};
+      @if $side != null{
+        .m#{$val}-md-#{$space} {
+          margin-#{$side}: #{$spaceamount};
+        }
+        .p-#{$val}-md-#{$space} {
+          padding-#{$side}: #{$spaceamount};
+        }
+      } @else {
+       .m-md-#{$space} {
+         margin: #{$spaceamount};
+       }
+       .p-md-#{$space} {
+         padding: #{$spaceamount};
+       }
+      }
     }
-
-    .p#{$val}-md-#{$space} {
-        padding-#{$side}: #{$spaceamount};
-    }
-   }
- }
+  }
 }
 
 @each  $space, $spaceamount in $spacers {
   @each $val, $side in $sides {
     @include mobile {
-    .m#{$val}-sm-#{$space} {
-        margin-#{$side}: #{$spaceamount};
-      }
-      .p#{$val}-sm-#{$space} {
+      @if $side != null{
+        .m#{$val}-sm-#{$space} {
+          margin-#{$side}: #{$spaceamount};
+        }
+        .p-#{$val}-sm-#{$space} {
           padding-#{$side}: #{$spaceamount};
         }
+      } @else {
+       .m-sm-#{$space} {
+         margin: #{$spaceamount};
+       }
+       .p-sm-#{$space} {
+         padding: #{$spaceamount};
+       }
       }
    }
  }
+}
 
 @each  $space, $spaceamount in $spacers {
   .mx-#{$space} {
@@ -95,28 +122,6 @@
       padding-top: #{$spaceamount};
       padding-bottom: #{$spaceamount};
     }
-  }
-}
-
-@each  $space, $spaceamount in $spacers {
-  .gap-#{$space} {
-    gap: #{$spaceamount};
-  }
-}
-
-@each  $space, $spaceamount in $spacers {
-  .gap-md-#{$space} {
-    @include pad {
-      gap: #{$spaceamount};
-    }
-  }
-}
-
-@each  $space, $spaceamount in $spacers {
-  .gap-sm-#{$space} {
-    @include mobile {
-      gap: #{$spaceamount};
-     }
   }
 }
 

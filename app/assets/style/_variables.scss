@@ -8,6 +8,7 @@ $white: #fff;
 $black: #000;
 $light: #F2F2F2;
 $gray-light: #6C6C6C;
+$gray-light2: #CED4DA;
 
 $theme-color: (
   primary:  $main,
@@ -22,6 +23,7 @@ $theme-color: (
 $border-color: (
     main: $main-border,
     gray: $gray,
+    gray-light: $gray-light2,
     light: $border-light
 );
 
@@ -44,6 +46,7 @@ $spacers: (
   auto: auto,
   0: 0,
   1: $spacer * 0.5,
+  s: $spacer * 0.75,
   2: $spacer,
   m: $spacer * 1.25,
   3: $spacer * 1.5,
@@ -54,6 +57,7 @@ $spacers: (
   8: $spacer * 3,
   9: $spacer * 3.125,
   10: $spacer * 3.5,
+  m2: $spacer * 3.75,
   11: $spacer * 4,
   12: $spacer * 5,
   13: $spacer * 6,
@@ -68,6 +72,7 @@ $sides: (
     'r': right
     ) !default;
 
+$floatVal: (left, right, none,);
 
 $flex-directionVal: (row, column, row-reverse, column-reverse) !default;
 
@@ -96,7 +101,12 @@ $alignVal: (baseline, top, middle, bottom, text-bottom, text-top) !default;
 
 $widthVal: (
   25: 25%,
+  30: 30%,
+  35: 35%,
+  40: 40%,
   50: 50%,
+  60: 60%,
+  70: 70%,
   75: 75%,
   100: 100%,
   auto: auto
