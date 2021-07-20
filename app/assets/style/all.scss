@@ -71,9 +71,24 @@ body {
   }
 }
 
-.link-white {
+.link {
   text-decoration: none;
-  color: $white;
+  &--underline{
+    position: relative;
+    &::after {
+    position: absolute;
+    width: 100%;
+    top: 100;
+    display:block;
+    content: '';
+    border-bottom: solid 2px $white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    }
+    &:hover::after,:focus::after{
+        transform: scaleX(1);
+    }
+  }
 }
 
 .icon {
