@@ -6,5 +6,23 @@
   .bg-#{$theme}{
     background-color: #{$color};
   }
+
+  .text-#{$theme}-hover:hover{
+    color: #{$color};
+  };
+  .bg-#{$theme}-hover:hover{
+    background-color: #{$color};
+  }
 };
 
+@for $i from 0 through 10{
+  @if $i != 0{
+    .opacity-#{$i}{
+      opacity: #{$i}0%;
+    }
+  } @else {
+    .opacity-0{
+      opacity: 0;
+    }
+  }
+}

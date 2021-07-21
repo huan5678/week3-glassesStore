@@ -1,16 +1,16 @@
 
 .container {
-    max-width: 1110px;
+    max-width: 1110px + $gutter-width;
     margin: 0 auto;
     padding-left: $gutter-width / 2;
     padding-right: $gutter-width / 2;
 
     @include pad {
-        max-width: 690px;
+        max-width: 690px + $gutter-width;
     }
 
     @include mobile {
-        max-width: 345px;
+        max-width: 345px + $gutter-width;
     }
 
     &-sm-none {

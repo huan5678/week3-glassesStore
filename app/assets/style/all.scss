@@ -1,19 +1,16 @@
-@import "reset";
-@import "variables";
-@import "breakpoint";
-@import "help";
-
-@import "colors";
-@import "grid";
-@import "space";
-@import "fontSet";
-@import "border";
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,900&display=swap');
-
-@import "component";
-
-@import "dimension";
+@import
+    "reset",
+    "variables",
+    "breakpoint",
+    "help",
+    "colors",
+    "grid",
+    "space",
+    "fontSet",
+    "border",
+    url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,900&display=swap'),
+    "component",
+    "dimension";
 
 
 

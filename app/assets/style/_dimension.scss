@@ -17,6 +17,10 @@
         height: 1.25rem;
       }
     }
+    &--search {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
   }
   
   .icon-list {
@@ -35,13 +39,22 @@
   }
 
   .img {
-    width: calc(100vw);
+    width: 100%;
     object-fit: cover;
   
     &--locate {
       height: 14rem;
       @include pad {
         height: 10.25rem;
+      }
+    }
+    &--blog {
+      height: 25rem;
+      @include pad {
+        height: 12.875rem;
+      }
+      @include mobile {
+        height: 13.5625rem;
       }
     }
   }

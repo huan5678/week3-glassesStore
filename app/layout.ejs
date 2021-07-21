@@ -11,7 +11,7 @@
 
 <body>
   <header class="header">
-    <div class="d-flex justify-between items-center container px-sm-0 flex-sm-column">
+    <nav class="d-flex justify-between items-center container px-sm-0 flex-sm-column">
       <h2 class="logo mx-sm-auto"><a href="/">LOGO</a></h2>
       <ul class="d-flex justify-between items-center text-center gap-10 gap-md-6 gap-sm-0 w-sm-100 flex-sm-wrap">
         <li class="w-sm-50 border-sm border-white">
@@ -35,7 +35,7 @@
           </a>
           </li>
       </ul>
-    </div>
+    </nav>
   </header>
 
   <%- contents %>
@@ -45,7 +45,7 @@
       <ul>
         <li class="d-flex justify-between items-start border-bottom border-white pb-3 mb-4 mb-sm-2">
           <ul class="">
-            <li class="mb-3 hide-sm">
+            <li class="mb-3 d-sm-none">
               <ul class="d-flex justify-between items-center gap-8">
                 <li><a href="/" class="text-white link link--underline">首頁</a></li>
                 <li><a href="productOp.html" class="text-white link link--underline">系列框架</a></li>
@@ -54,17 +54,19 @@
                 <li><a href="faq.html" class="text-white link link--underline">常見問題</a></li>
               </ul>
             </li>
-            <li class="mb-2">
-              <a class="text-white link link--underline" href="tel:+8000000000">
-                <img class="icon mr-1" src="./assets/images/icon-phone.svg" alt="tel" />
-                <span class="d-inline-block align-middle fs-4 fs-md-7 fs-sm-bs">0800-000-000</span>
-              </a>
-            </li>
             <li>
-              <a class="text-white link link--underline" href="mailto:glass@business.com">
-                <img class="icon mr-1" src="./assets/images/icon-mail.svg" alt="mail" />
-                <span class="d-inline-block align-middle fs-4 fs-md-7 fs-sm-bs">glasses@business.com</span>
-              </a>
+              <address>
+                <div class="mb-2">
+                  <a class="text-white link link--underline fs-4 fs-md-7 fs-sm-bs align-middle" href="tel:+8000000000">
+                    <img class="icon mr-1" src="./assets/images/icon-phone.svg" alt="tel" />
+                    <span class="d-inline-block">0800-000-000</span>
+                  </a>
+                </div>
+                <a class="text-white link link--underline fs-4 fs-md-7 fs-sm-bs align-middle" href="mailto:glass@business.com">
+                  <img class="icon mr-1" src="./assets/images/icon-mail.svg" alt="mail" />
+                  <span class="d-inline-block">glasses@business.com</span>
+                </a>
+              </address>
             </li>
           </ul>
           <ul class="w-sm-35 d-flex justify-between items-center gap-4 gap-sm-3">

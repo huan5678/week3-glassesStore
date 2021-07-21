@@ -1,16 +1,3 @@
-.hide {
-    display: none;
-}
-@include pad {
-    .hide-md {
-        display: none;
-    }
-}
-@include mobile {
-    .hide-sm {
-        display: none;
-    }
-}
 
 @each $float in $floatVal {
     .float-#{$float}{
