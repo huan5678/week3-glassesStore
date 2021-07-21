@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>首頁</title>
+  <title>門市據點</title>
   <link rel="stylesheet" href="./assets/style/all.css">
 </head>
 
@@ -38,12 +38,47 @@
     </div>
   </header>
 
-  
-<h1>
-  這是一段話
-</h1>
+  <div class="container pt-13 pt-md-m2 pt-sm-m1 mb-xl mb-md-13 mb-sm-10">
+    <h1 class="border-left-2 border-md-left-1 border-main mb-m2 mb-md-6 mb-sm-3">
+        <span class="fw-bold pl-2 fs-2 fs-sm-m">門市據點</span>
+    </h1>
+    <label for="selectStore">
+        <h2 class="fs-6 mr-m mr-sm-s fs-md-bs fs-sm-9 d-inline">選擇分店</h2>
+        <select name="selectStore" id="selectStore" class="fs-8 fs-md-bs fs-sm-9 select-bar">
+            <option value="中山">台北中山旗艦店</option>
+            <option value="文山">台北市文山展售店</option>
+            <option value="101">台北市101概念店</option>
+        </select>
+    </label>
 
-<div class="box"></div>
+    <div class="row items-stretch pt-4 pt-md-3 pt-sm-m">
+        <ul class="col-5 col-md-12 mb-md-4 mb-sm-2 d-md-flex row-md gap-md-m1 items-md-center">
+            <li class="w-md-50">
+                <img class="img img--locate" src="./assets/images/locate1.jpeg" alt="">
+            </li>
+            <li class="w-md-50">
+                <ul>
+                    <li class="border border-gray-light">
+                        <h3 class="py-s py-md-1 pl-3 fs-6 fs-md-bs fw-md-bold">台北中山旗艦店</h3>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="border border-gray-light">
+                        <ul class="py-2 px-3 pr-md-0">
+                            <li class="mb-1"><img class="icon--locate mr-1" src="./assets/images/icon-phone-black.svg" alt="tel"><span class="fs-7 fs-md-9">電話：02000-1234</span></li>
+                            <li class="mb-1"><img class="icon--locate mr-1" src="./assets/images/icon-clock-black.svg" alt=""><span class="fs-7 fs-md-9">營業時間：10:00-21:00</span></li>
+                            <li><img class="icon--locate mr-1" src="./assets/images/icon-map.svg" alt=""><span class="fs-7 fs-md-9">地址：台北市中山區南京東路二段25號</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <iframe class="col-7 col-md-12 map-h" frameborder="0" scrolling="no" loading="lazy"
+                    marginheight="0" marginwidth="0"
+                    src="https://maps.google.com/maps?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%8D%97%E4%BA%AC%E6%9D%B1%E8%B7%AF%E4%BA%8C%E6%AE%B525%E8%99%9F&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    allowfullscreen></iframe>
+    </div>
+</div>
 
   <footer class="footer">
     <div class="container">
