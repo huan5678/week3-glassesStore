@@ -50,6 +50,7 @@ $spacers: (
   2: $spacer,
   m: $spacer * 1.25,
   3: $spacer * 1.5,
+  m1: $spacer * 1.75,
   4: $spacer * 2,
   5: $spacer * 2.25,
   6: $spacer * 2.5,
@@ -120,6 +121,7 @@ $sizes: (
   3: $sizer * 2.625,
   4: $sizer * 2.25,
   5: $sizer * 2,
+  m: $sizer * 1.75,
   6: $sizer * 1.5,
   7: $sizer * 1.25,
   8: $sizer * 1.125,
@@ -128,10 +130,11 @@ $sizes: (
 
 $weightVal: (
   base: 400,
-  bold: 500,
-  bolder: 700,
+  med: 500,
+  bold: 700,
   black: 900,
 );
 
 $pos: (static, relative, absolute, fixed, sticky);
 
+$textAlign: (left, center, right, justify);

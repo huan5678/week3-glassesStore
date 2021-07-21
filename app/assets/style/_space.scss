@@ -1,69 +1,3 @@
-
-
-@each  $space, $spaceamount in $spacers {
- @each $val, $side in $sides {
-   @if $side != null{
-     .m#{$val}-#{$space} {
-       margin-#{$side}: #{$spaceamount};
-     }
-     .p#{$val}-#{$space} {
-       padding-#{$side}: #{$spaceamount};
-     }
-   } @else {
-      .m-#{$space} {
-        margin: #{$spaceamount};
-      }
-      .p-#{$space} {
-        padding: #{$spaceamount};
-      }
-   }
-  }
-}
-
-@each  $space, $spaceamount in $spacers {
-  @each $val, $side in $sides {
-    @include pad {
-      @if $side != null{
-        .m#{$val}-md-#{$space} {
-          margin-#{$side}: #{$spaceamount};
-        }
-        .p-#{$val}-md-#{$space} {
-          padding-#{$side}: #{$spaceamount};
-        }
-      } @else {
-       .m-md-#{$space} {
-         margin: #{$spaceamount};
-       }
-       .p-md-#{$space} {
-         padding: #{$spaceamount};
-       }
-      }
-    }
-  }
-}
-
-@each  $space, $spaceamount in $spacers {
-  @each $val, $side in $sides {
-    @include mobile {
-      @if $side != null{
-        .m#{$val}-sm-#{$space} {
-          margin-#{$side}: #{$spaceamount};
-        }
-        .p-#{$val}-sm-#{$space} {
-          padding-#{$side}: #{$spaceamount};
-        }
-      } @else {
-       .m-sm-#{$space} {
-         margin: #{$spaceamount};
-       }
-       .p-sm-#{$space} {
-         padding: #{$spaceamount};
-       }
-      }
-   }
- }
-}
-
 @each  $space, $spaceamount in $spacers {
   .mx-#{$space} {
     margin-right: #{$spaceamount};
@@ -124,6 +58,71 @@
     }
   }
 }
+
+@each  $space, $spaceamount in $spacers {
+ @each $val, $side in $sides {
+   @if $side != null{
+     .m#{$val}-#{$space} {
+       margin-#{$side}: #{$spaceamount};
+     }
+     .p#{$val}-#{$space} {
+       padding-#{$side}: #{$spaceamount};
+     }
+   } @else {
+      .m-#{$space} {
+        margin: #{$spaceamount};
+      }
+      .p-#{$space} {
+        padding: #{$spaceamount};
+      }
+   }
+  }
+}
+
+@each  $space, $spaceamount in $spacers {
+  @each $val, $side in $sides {
+    @include pad {
+      @if $side != null{
+        .m#{$val}-md-#{$space} {
+          margin-#{$side}: #{$spaceamount};
+        }
+        .p#{$val}-md-#{$space} {
+          padding-#{$side}: #{$spaceamount};
+        }
+      } @else {
+       .m-md-#{$space} {
+         margin: #{$spaceamount};
+       }
+       .p-md-#{$space} {
+         padding: #{$spaceamount};
+       }
+      }
+    }
+  }
+}
+
+@each  $space, $spaceamount in $spacers {
+  @each $val, $side in $sides {
+    @include mobile {
+      @if $side != null{
+        .m#{$val}-sm-#{$space} {
+          margin-#{$side}: #{$spaceamount};
+        }
+        .p#{$val}-sm-#{$space} {
+          padding-#{$side}: #{$spaceamount};
+        }
+      } @else {
+       .m-sm-#{$space} {
+         margin: #{$spaceamount};
+       }
+       .p-sm-#{$space} {
+         padding: #{$spaceamount};
+       }
+      }
+   }
+ }
+}
+
 
 @each $width, $val in $widthVal {
   .w-#{$width}{

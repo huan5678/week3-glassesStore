@@ -29,3 +29,39 @@
     font-weight: #{$val};
   }
 }
+@each $fw, $val in $weightVal {
+  @include pad{
+    .fw-md-#{$fw}{
+      font-weight: #{$val};
+    }
+  }
+}
+@each $fw, $val in $weightVal {
+  @include mobile {
+    .fw-sm-#{$fw}{
+      font-weight: #{$val};
+    }
+  }
+}
+
+@each $loc in $textAlign {
+  .text-#{$loc}{
+    text-align: #{$loc};
+  }
+}
+
+@include pad{
+  @each $loc in $textAlign {
+    .text-md-#{$loc}{
+      text-align: #{$loc};
+    }
+  }
+}
+
+@include mobile{
+  @each $loc in $textAlign {
+    .text-sm-#{$loc}{
+      text-align: #{$loc};
+    }
+  }
+}

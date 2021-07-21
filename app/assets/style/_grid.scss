@@ -33,9 +33,6 @@
     flex-wrap: wrap;
     margin-left: -($gutter-width / 2);
     margin-right: -($gutter-width / 2);
-    &--gap {
-        column-gap: $gutter-width;
-    }
 }
 
 .no-gutters {
@@ -80,6 +77,27 @@
     }
 }
 
+@each $dp in $displayVal {
+    .d-#{$dp} {
+        display: #{$dp};
+    }
+}
+
+@each $dp in $displayVal {
+    @include pad {
+        .d-md-#{$dp} {
+            display: #{$dp};
+        }
+    }
+}
+
+@each $dp in $displayVal {
+    @include mobile {
+        .d-sm-#{$dp} {
+            display: #{$dp};
+        }
+    }
+}
 
 
 @each $flex in $flex-directionVal {
@@ -128,44 +146,35 @@
     }
 }
 
-@each $jc,
-$val in $justify-contentVal {
+@each $jc, $val in $justify-contentVal {
     .justify-#{$jc} {
         justify-content: #{$val};
     }
 }
 
-@each $dp in $displayVal {
-    .d-#{$dp} {
-        display: #{$dp};
-    }
-}
-
-@each $dp in $displayVal {
-    @include pad {
-        .d-md-#{$dp} {
-            display: #{$dp};
+@include pad {
+    @each $jc, $val in $justify-contentVal {
+        .justify-md-#{$jc} {
+            justify-content: #{$val};
         }
     }
 }
 
-@each $dp in $displayVal {
-    @include mobile {
-        .d-sm-#{$dp} {
-            display: #{$dp};
+@include mobile {
+    @each $jc, $val in $justify-contentVal {
+        .justify-sm-#{$jc} {
+            justify-content: #{$val};
         }
     }
 }
 
-@each $its,
-$val in $itemsVal {
+@each $its, $val in $itemsVal {
     .items-#{$its} {
         align-items: #{$val};
     }
 }
 
-@each $its,
-$val in $itemsVal {
+@each $its, $val in $itemsVal {
     @include pad {
         .items-md-#{$its} {
             align-items: #{$val};
@@ -173,8 +182,7 @@ $val in $itemsVal {
     }
 }
 
-@each $its,
-$val in $itemsVal {
+@each $its, $val in $itemsVal {
     @include mobile {
         .items-sm-#{$its} {
             align-items: #{$val};
