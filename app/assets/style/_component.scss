@@ -131,3 +131,12 @@ body {
   .faq-content {
     white-space: pre-line;
   }
+
+
+
+    .breadcrumb{
+      display: flex;
+      li+li:before {
+        content: "/\00a0";
+      }
+    } 

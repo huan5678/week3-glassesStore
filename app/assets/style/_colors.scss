@@ -15,6 +15,43 @@
   }
 };
 
+@include pad {
+  @each $theme, $color in $theme-color{
+    .text-md-#{$theme}{
+      color: #{$color};
+    };
+    .bg-md-#{$theme}{
+      background-color: #{$color};
+    }
+  
+    .text-md-#{$theme}-hover:hover{
+      color: #{$color};
+    };
+    .bg-md-#{$theme}-hover:hover{
+      background-color: #{$color};
+    }
+  };
+}
+
+@include mobile {
+  @each $theme, $color in $theme-color{
+    .text-sm-#{$theme}{
+      color: #{$color};
+    };
+    .bg-sm-#{$theme}{
+      background-color: #{$color};
+    }
+  
+    .text-sm-#{$theme}-hover:hover{
+      color: #{$color};
+    };
+    .bg-sm-#{$theme}-hover:hover{
+      background-color: #{$color};
+    }
+  };
+}
+
+
 @for $i from 0 through 10{
   @if $i != 0{
     .opacity-#{$i}{
