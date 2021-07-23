@@ -24,7 +24,8 @@ $border-color: (
     main: $main-border,
     gray: $gray,
     gray-light: $gray-light2,
-    light: $border-light
+    light: $border-light,
+    gray-dark: #707070,
 );
 
 $borderLoc:(null, top, right, bottom, left);
