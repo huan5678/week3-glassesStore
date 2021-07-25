@@ -1,0 +1,83 @@
+.breadcrumb{
+  display: flex;
+  li+li:before {
+    content: "/\00a0";
+  }
+}
+
+.content--blog-content {
+  padding-bottom: 10rem;
+  @include pad {
+    padding-bottom: 6rem;
+  }
+  @include mobile {
+    padding-bottom: 3.5rem;
+  }
+}
+
+.tag {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.5rem;
+  row-gap: .5rem;
+  @include pad {
+    column-gap: 1rem;
+    row-gap: 0;
+  }
+  @include mobile {
+    column-gap: .5rem;
+  }
+  a{
+    text-decoration: none;
+    color:$main;
+    font-weight: bold;
+    font-size: 1.5rem;
+    @include pad {
+      font-size: 1rem;
+    }
+  }
+}
+
+.icon {
+  &--blog-media {
+    fill: $black;
+    width: 1.5rem;
+    height: 1.5rem;
+    @include pad {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+  &--blog-search {
+    width: 2.5rem;
+    height: 2.5rem;
+
+  }
+  &--blog-forward {
+    width: 1.5rem;
+    height: 1.5rem;
+    @include mobile {
+      width: 1rem;
+      height: 1rem;
+    }
+    &-flip {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.blog-nav {
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  @include pad {
+    padding-top: 0.4375rem;
+    padding-bottom: 0.4375rem;
+  }
+}
+
+.blog-tag-title {
+  font-size: 1.75rem;
+  @include pad {
+    font-size: 1.25rem;
+  }
+}

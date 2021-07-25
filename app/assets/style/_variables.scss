@@ -1,3 +1,6 @@
+@use "sass:math";
+
+$base: 16;
 
 $main: #AA0601;
 $main-border: #9F1213;
@@ -9,6 +12,7 @@ $black: #000;
 $light: #F2F2F2;
 $gray-light: #6C6C6C;
 $gray-light2: #CED4DA;
+$gray-light3: #707070;
 
 $theme-color: (
   primary:  $main,
@@ -18,17 +22,17 @@ $theme-color: (
   gray: $gray,
   light: $light,
   gray-light: $gray-light,
-);
+) !default;
 
 $border-color: (
     main: $main-border,
     gray: $gray,
     gray-light: $gray-light2,
     light: $border-light,
-    gray-dark: #707070,
-);
+    gray-dark: $gray-light3,
+) !default;
 
-$borderLoc:(null, top, right, bottom, left);
+$borderLoc:(null, top, right, bottom, left) !default;
 
 $borderSize:(
   0: 0px,
@@ -36,35 +40,32 @@ $borderSize:(
   1: 4px,
   2: 8px,
   3: 3px,
-);
+) !default;
 
 
-$gutter-width:30px;
-$grid-num:12;
+$gutter-width: 30px !default;
+$grid-num: 12 !default;
 
 $spacer: 1rem !default;
 $spacers: (
-  auto: auto,
-  0: 0,
-  xs: $spacer * 0.375,
-  1: $spacer * 0.5,
-  s: $spacer * 0.75,
-  2: $spacer,
-  m: $spacer * 1.25,
-  3: $spacer * 1.5,
-  m1: $spacer * 1.75,
-  4: $spacer * 2,
-  5: $spacer * 2.25,
-  6: $spacer * 2.5,
-  7: $spacer * 2.875,
-  8: $spacer * 3,
-  9: $spacer * 3.125,
-  10: $spacer * 3.5,
-  m2: $spacer * 3.75,
-  11: $spacer * 4,
-  12: $spacer * 5,
-  13: $spacer * 6,
-  xl: $spacer * 10,
+  0:  0,
+  1:  (8/$base)*$spacer, 
+  '1.5':  (12/$base)*$spacer,
+  2:  (16/$base)*$spacer, 
+  3:  (24/$base)*$spacer, 
+  '3.5':  (28/$base)*$spacer,
+  4:  (32/$base)*$spacer, 
+  '4.5':  (36/$base)*$spacer,
+  5:  (40/$base)*$spacer, 
+  6:  (48/$base)*$spacer, 
+  7:  (56/$base)*$spacer, 
+  '7.5':  (60/$base)*$spacer,
+  8:  (64/$base)*$spacer, 
+  9:  (72/$base)*$spacer, 
+  10: (80/$base)*$spacer, 
+  11: (88/$base)*$spacer, 
+  12: (96/$base)*$spacer,
+  auto: auto
 ) !default;
 
 $sides: (
@@ -75,7 +76,7 @@ $sides: (
     'r': right
     ) !default;
 
-$floatVal: (left, right, none,);
+$floatVal: (left, right, none,) !default;
 
 $flex-directionVal: (row, column, row-reverse, column-reverse) !default;
 
@@ -113,31 +114,33 @@ $widthVal: (
   75: 75%,
   100: 100%,
   auto: auto
-);
+) !default;
 
 $sizer: 1rem !default;
 $sizes: (
   bs: $sizer,
-  1: $sizer * 4,
-  2: $sizer * 3,
-  3: $sizer * 2.625,
-  4: $sizer * 2.25,
-  5: $sizer * 2,
-  m2: $sizer * 1.875,
-  m: $sizer * 1.75,
-  6: $sizer * 1.5,
-  7: $sizer * 1.25,
-  8: $sizer * 1.125,
-  9: $sizer * 0.875
-);
+  1:  (72/$base)*$sizer,
+  2:  (64/$base)*$sizer,
+  3:  (48/$base)*$sizer,
+  4:  (42/$base)*$sizer,
+  5:  (36/$base)*$sizer,
+  6:  (32/$base)*$sizer,
+  7:  (24/$base)*$sizer,
+  8:  (20/$base)*$sizer,
+  9:  (14/$base)*$sizer,
+) !default;
 
 $weightVal: (
   base: 400,
   med: 500,
   bold: 700,
   black: 900,
-);
+) !default;
 
-$pos: (static, relative, absolute, fixed, sticky);
+$pos: (static, relative, absolute, fixed, sticky) !default;
 
-$textAlign: (left, center, right, justify);
+$textAlign: (left, center, right, justify) !default;
+
+$whiteSpace: (normal, nowrap, pre, pre-line, pre-wrap) !default;
+
+

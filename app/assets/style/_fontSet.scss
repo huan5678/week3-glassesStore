@@ -65,3 +65,9 @@
     }
   }
 }
+
+@each $ws in $whiteSpace {
+  .whitespace-#{$ws}{
+    white-space: #{$ws};
+  }
+}

@@ -1,16 +1,28 @@
 @import
+    //重置 變數
     "reset",
     "variables",
+
+    // 斷點 mixin
     "breakpoint",
-    "help",
+
+    //通用與元件類別
     "colors",
     "grid",
     "space",
     "fontSet",
     "border",
     url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,900&display=swap'),
-    "component",
-    "dimension";
+
+    //頁面分檔
+    "base",
+    "common",
+    "layout",
+    "product",
+    "locate",
+    "blogContent",
+    "index"
+    ;
 
 
 

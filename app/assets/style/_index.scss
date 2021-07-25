@@ -1,0 +1,141 @@
+$bg-light: #AA06010D;
+
+.hero {
+  height: 52.5rem;
+  background: url("../images/banner.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  @include mobile {
+    background-image: url("../images/banner-sm.png");
+    height: 24.625rem;
+  }
+}
+
+.bg-index-light {
+  background-color: $bg-light;
+}
+
+.icon--service {
+  width: 6.25rem;
+  height: 6.25rem;
+}
+
+.index-product{
+  &-img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    @include pad {
+      height: 10.5rem;
+    }
+    @include mobile {
+      height: 8.375rem;
+    }
+  }
+  &-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    @include pad {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+  &-title {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    @include mobile {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%)
+    }
+  }
+}
+
+.co-branding{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-bg-set {
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+  &-bg{
+    background: url("../images/co-branding.jpg");
+  }
+  &-product {
+    height: 28.4375rem;
+    @include pad {
+      height: 17.375rem;
+    }
+    @include mobile {
+      height: 18.1875rem;
+    }
+    &-img1{
+      background: 
+      linear-gradient(
+      rgba(255, 255, 255, 0.5), 
+      rgba(255, 255, 255, 0.5)
+    ),
+      url("../images/product-8.png");
+    }
+    &-img2{
+      background: 
+      linear-gradient(
+      rgba(255, 255, 255, 0.5), 
+      rgba(255, 255, 255, 0.5)
+    ),
+      url("../images/product-9.png");
+    }
+  }
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  height: 28.75rem;
+  overflow: hidden;
+  border-radius: .25rem;
+  box-shadow: 0 .125rem .375rem #00000029;
+  &-img {
+    height: 16rem;
+    object-fit: cover;
+    width: 100%;
+  }
+  &-body {
+    padding: 1rem;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &-footer {
+    color: $gray-light3;
+  }
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.contact-input {
+  padding-top: 0.75rem;
+  padding-left: 1rem;
+  padding-bottom: 0.875rem;
+  &-checkbox {
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: transparent;
+    margin-right: .25rem;
+  }
+}
+textarea.contact-input {
+  height: 8.5rem;
+  @include pad {
+    height: 6.25rem;
+  }
+}

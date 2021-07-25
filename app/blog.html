@@ -1,13 +1,13 @@
 ---
-title: 部落格
+title: 部落格 -  OOJ眼鏡公司
 layout: ./app/layout.ejs
 engine: ejs
 current: index
 ---
-<nav class="bg-secondary py-s text-white d-sm-none mb-6 mb-md-4">
+<nav class="bg-secondary blog-nav text-white d-sm-none">
     <ul class="container">
-        <li class="d-flex justify-between items-center py-xs py-md-bs">
-            <ul class="d-flex justify-between gap-8 gap-md-4">
+        <li class="d-flex justify-between items-center">
+            <ul class="d-flex justify-between gap-6 gap-md-4">
                 <li class="pos-relative"><a class="link link--underline text-white fw-bold fs-7 fs-md-bs "
                         href="blog.html">最新消息</a></li>
                 <li class="pos-relative"><a class="link link--underline text-white fw-bold fs-7 fs-md-bs "
@@ -17,22 +17,20 @@ current: index
                 <li class="pos-relative"><a class="link link--underline text-white fw-bold fs-7 fs-md-bs "
                         href="#">鏡框小知識</a></li>
             </ul>
-            <a href="#"><img class="icon icon--search" src="./assets/images/icon-search.svg" alt="search"></a>
+            <a href="#"><img class="icon--blog-search" src="./assets/images/icon-search.svg" alt="search"></a>
         </li>
     </ul>
 </nav>
-<main class="container">
-    <div class="mb-xl mb-md-13 mb-sm-10">
-        <div class="mb-m2 mb-md-6 mb-sm-3">
-            <h1 class="fw-bold fs-2 fs-sm-m">
-                <span class="border-left-2 border-md-left-1 border-main pl-2">部落格</span>
-            </h1>
-        </div>
-        <article class="row mb-12 mb-md-3 mb-sm-m pos-relative">
+<main class="content content--blog">
+    <div class="container">
+        <h1 class="fw-bold fs-3 h1-fs-sm-m h1-mb">
+            <span class="border-left-2 border-md-left-1 border-main pl-2">部落格</span>
+        </h1>
+        <article class="row mb-10 mb-md-3 mb-sm-2.5 pos-relative">
             <img src="./assets/images/blog-1.png" alt="" class="col-7 col-md-6 col-sm-12 img img--blog">
             <div class="col-5 col-md-6 col-sm-12 d-flex flex-column justify-between">
                 <div>
-                    <h2 class="text-secondary fs-5 fs-md-7 fs-sm-bs">情人特別企劃</h2>
+                    <h2 class="text-secondary fs-6 fsmd-8 fs-sm-bs">情人特別企劃</h2>
                     <div class="d-flex justify-between">
                         <span class="fs-7 fs-md-bs">2020 Valentine’s Special</span>
                         <span class="opacity-7 fs-md-9">2020/02/14</span>
@@ -44,11 +42,11 @@ current: index
                 </p>
             </div>
         </article>
-        <article class="row mb-12 mb-md-3 mb-sm-m pos-relative">
+        <article class="row mb-10 mb-md-3 mb-sm-2.5 pos-relative">
             <img src="./assets/images/blog-2.png" alt="" class="col-7 col-md-6 col-sm-12 img img--blog">
             <div class="col-5 col-md-6 col-sm-12 d-flex flex-column justify-between">
                 <div>
-                    <h2 class="text-secondary fs-5 fs-md-7 fs-sm-bs">街頭潮人訪問</h2>
+                    <h2 class="text-secondary fs-6 fsmd-8 fs-sm-bs">街頭潮人訪問</h2>
                     <div class="d-flex justify-between">
                         <span class="fs-7 fs-md-bs">Street Interview</span>
                         <span class="opacity-7 fs-md-9">2020/02/02</span>
@@ -59,11 +57,11 @@ current: index
                 </p>
             </div>
         </article>
-        <article class="row mb-12 mb-md-3 mb-sm-m pos-relative">
+        <article class="row mb-10 mb-md-3 mb-sm-2.5 pos-relative">
             <img src="./assets/images/blog-3.png" alt="" class="col-7 col-md-6 col-sm-12 img img--blog">
             <div class="col-5 col-md-6 col-sm-12 d-flex flex-column justify-between">
                 <div>
-                    <h2 class="text-secondary fs-5 fs-md-7 fs-sm-bs">春季新品上市</h2>
+                    <h2 class="text-secondary fs-6 fsmd-8 fs-sm-bs">春季新品上市</h2>
                     <div class="d-flex justify-between">
                         <span class="fs-7 fs-md-bs">New Selection</span>
                         <span class="opacity-7 fs-md-9">2020/02/02</span>
@@ -74,11 +72,11 @@ current: index
                 </p>
             </div>
         </article>
-        <article class="row mb-12 mb-md-3 mb-sm-m pos-relative">
+        <article class="row mb-10 mb-md-3 mb-sm-2.5 pos-relative">
             <img src="./assets/images/blog-4.png" alt="" class="col-7 col-md-6 col-sm-12 img img--blog">
             <div class="col-5 col-md-6 col-sm-12 d-flex flex-column justify-between">
                 <div>
-                    <h2 class="text-secondary fs-5 fs-md-7 fs-sm-bs">設計師獨享鏡框優惠</h2>
+                    <h2 class="text-secondary fs-6 fsmd-8 fs-sm-bs">設計師獨享鏡框優惠</h2>
                     <div class="d-flex justify-between">
                         <span class="fs-7 fs-md-bs">Sales for Designer</span>
                         <span class="opacity-7 fs-md-9">2020/01/18</span>
@@ -89,11 +87,11 @@ current: index
                 </p>
             </div>
         </article>
-        <article class="row mb-12 mb-md-3 mb-sm-m pos-relative">
+        <article class="row mb-10 mb-md-3 mb-sm-2.5 pos-relative">
             <img src="./assets/images/blog-5.png" alt="" class="col-7 col-md-6 col-sm-12 img img--blog">
             <div class="col-5 col-md-6 col-sm-12 d-flex flex-column justify-between">
                 <div>
-                    <h2 class="text-secondary fs-5 fs-md-7 fs-sm-bs">抵抗夏日大作戰</h2>
+                    <h2 class="text-secondary fs-6 fsmd-8 fs-sm-bs">抵抗夏日大作戰</h2>
                     <div class="d-flex justify-between">
                         <span class="fs-7 fs-md-bs">Summer Special</span>
                         <span class="opacity-7 fs-md-9">2019/08/07</span>
@@ -105,7 +103,7 @@ current: index
             </div>
         </article>
     </div>
-    <nav class="mb-xl mb-md-13 mb-sm-10">
+    <nav>
         <ul class="d-flex justify-center text-center">
             <li class="border-gray border pos-relative pagination pagination--page"><a class="link link--block text-gray" href="#">上一頁</a></li>
             <li class="border-gray border pos-relative pagination"><a class="link link--block text-gray" href="#">1</a></li>
