@@ -192,6 +192,14 @@ img {
   max-width: 100%;
   height: auto; }
 
+@font-face {
+  font-family: 'Roboto';
+  unicode-range: U+000-5FF, U+1e00-1fff, U+2000-2300; }
+
+body {
+  font-family: 'Roboto','Noto Sans TC', sans-serif;
+  font-size: 16px; }
+
 @use "sass:math";
 .text-primary {
   color: #AA0601; }
@@ -4832,14 +4840,6 @@ img {
   .border-sm-left-3 {
     border-style: solid;
     border-left-width: 3px; } }
-
-@font-face {
-  font-family: 'Roboto';
-  unicode-range: U+000-5FF, U+1e00-1fff, U+2000-2300; }
-
-body {
-  font-family: 'Roboto','Noto Sans TC', sans-serif;
-  font-size: 16px; }
 
 .icon {
   width: 3rem;
