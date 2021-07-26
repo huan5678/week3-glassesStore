@@ -13,7 +13,9 @@
 }
 
 .map-h {
-  height: 26.375rem;
+  @include pad {
+    height: 26.375rem;
+  }
   @include mobile {
     height: 13.1875rem;
   }
