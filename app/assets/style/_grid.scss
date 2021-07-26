@@ -18,7 +18,17 @@
             max-width: 100%;
         }
     }
+    &-md {
+        @include pad {
+            margin: 0 auto;
+            max-width: 690px + $gutter-width;
+            padding-left: $gutter-width / 2;
+            padding-right: $gutter-width / 2;
+        }
+        
+    }
 }
+
 
 .container-fluid {
     width: 100%;
