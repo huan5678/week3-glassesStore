@@ -448,6 +448,12 @@ body {
   @media (max-width: 767px) {
     .container-sm-none {
       max-width: 100%; } }
+  @media (max-width: 992px) {
+    .container-md {
+      margin: 0 auto;
+      max-width: 720px;
+      padding-left: 15px;
+      padding-right: 15px; } }
 
 .container-fluid {
   width: 100%;
@@ -5284,6 +5290,8 @@ body {
   @media (max-width: 767px) {
     .content--blog-content {
       padding-bottom: 3.5rem; } }
+  .content--blog-content p {
+    color: #0A0A0A; }
 
 .tag {
   display: -webkit-box;
