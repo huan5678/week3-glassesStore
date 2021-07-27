@@ -64,17 +64,19 @@
 
   .pagination {
     font-size: 1.125rem;
-    padding: .75rem 0.9375rem;
+    padding: .75rem 1rem;
     &--page {
       font-size: 1.1875rem;
-      padding: .625rem .75rem;
+      line-height: 1.8125rem;
+      padding: .6875rem .75rem;
     }
     @include mobile{
+      padding: .75rem .9375rem;
       font-size: 1rem;
       &--page {
-        flex-grow: 1;
-        flex-shrink: 0;
         font-size: 1.0625rem;
+        line-height: 1.59375rem;
+        padding: .625rem .75rem .6875rem .75rem;
       }
     }
     &:hover{
