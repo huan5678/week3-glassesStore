@@ -5043,9 +5043,6 @@ body {
       max-width: -webkit-min-content;
       max-width: -moz-min-content;
       max-width: min-content; } }
-  @media (max-width: 320px) {
-    .icon {
-      display: none; } }
   .icon:hover {
     -webkit-transform: translateY(-0.25rem);
         -ms-transform: translateY(-0.25rem);
@@ -5115,7 +5112,7 @@ body {
         line-height: 1.59375rem;
         padding: .625rem .75rem .6875rem .75rem; } }
   .pagination:hover {
-    background-color: #6C6C6C; }
+    background-color: #000; }
     .pagination:hover a {
       color: #fff; }
 
