@@ -218,13 +218,3 @@ template {
 [hidden] {
     display: none
 }
-
-
-*,*::after,*::before{
-    box-sizing: border-box;
-}
-img {
-    vertical-align: middle;
-    max-width: 100%;
-    height: auto;
-}

@@ -1,7 +1,5 @@
 .header {
     padding: 1.875rem 5.5rem;
-    color: $white;
-    background-color: $main;
     @include pad {
       padding: 1.875rem 0;
     }
@@ -11,7 +9,7 @@
     }
   }
   
-  .logo a{
+  .logo{
     display: block;
     width: 5rem;
     height: 3.0625rem;
@@ -28,12 +26,3 @@
     }
   }
   
-  .footer {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    color: $white;
-    background-color: $main;
-    &-mb {
-      margin-bottom: 2.25rem;
-    }
-  }

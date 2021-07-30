@@ -5,8 +5,17 @@
     unicode-range: U+000-5FF, U+1e00-1fff, U+2000-2300;
   }
 
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Roboto','Noto Sans TC', sans-serif;
     font-size: 16px;
   }
 
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
