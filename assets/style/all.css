@@ -183,22 +183,22 @@ template {
 [hidden] {
   display: none; }
 
+@font-face {
+  font-family: 'Roboto';
+  unicode-range: U+000-5FF, U+1e00-1fff, U+2000-2300; }
+
 *, *::after, *::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
+
+body {
+  font-family: 'Roboto','Noto Sans TC', sans-serif;
+  font-size: 16px; }
 
 img {
   vertical-align: middle;
   max-width: 100%;
   height: auto; }
-
-@font-face {
-  font-family: 'Roboto';
-  unicode-range: U+000-5FF, U+1e00-1fff, U+2000-2300; }
-
-body {
-  font-family: 'Roboto','Noto Sans TC', sans-serif;
-  font-size: 16px; }
 
 @use "sass:math";
 .text-primary {
@@ -5190,9 +5190,7 @@ body {
       font-size: 1.75rem; } }
 
 .header {
-  padding: 1.875rem 5.5rem;
-  color: #fff;
-  background-color: #AA0601; }
+  padding: 1.875rem 5.5rem; }
   @media (max-width: 992px) {
     .header {
       padding: 1.875rem 0; } }
@@ -5201,7 +5199,7 @@ body {
       padding-top: 0.625rem;
       padding-bottom: 0; } }
 
-.logo a {
+.logo {
   display: block;
   width: 5rem;
   height: 3.0625rem;
@@ -5212,7 +5210,7 @@ body {
   white-space: nowrap;
   overflow: hidden; }
   @media (max-width: 767px) {
-    .logo a {
+    .logo {
       width: 3rem;
       height: 1.8125rem;
       margin-bottom: 0.625rem; } }
