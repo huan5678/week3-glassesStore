@@ -64,6 +64,25 @@
     }
 }
 
+.col {
+    max-width: 100% !important;
+    flex: 1 1 0% !important;
+     @include pad {
+         &-md{
+            max-width: 100% !important;
+            flex: 1 1 0% !important;
+         }
+    }
+    @include mobile {
+        &-sm{
+            max-width: 100% !important;
+            flex: 1 1 0% !important;
+        }
+    }
+}
+
+
+
 
 @for $i from 1 through $grid-num {
     .col-#{$i} {

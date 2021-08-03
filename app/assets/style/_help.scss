@@ -1,6 +1,0 @@
-
-@each $float in $floatVal {
-    .float-#{$float}{
-        float: #{$float};
-    }
-}

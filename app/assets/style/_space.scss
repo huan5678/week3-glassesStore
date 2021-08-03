@@ -159,3 +159,9 @@
     }
   }
 }
+
+@each $range, $val in $z-indexes {
+  .z-#{$range}{
+    z-index: #{$val};
+  }
+}

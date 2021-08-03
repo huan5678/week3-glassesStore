@@ -71,3 +71,19 @@
     white-space: #{$ws};
   }
 }
+
+@include pad {
+    @each $ws in $whiteSpace {
+    .whitespace-md-#{$ws}{
+      white-space: #{$ws};
+    }
+  }
+}
+
+@include mobile {
+    @each $ws in $whiteSpace {
+    .whitespace-sm-#{$ws}{
+      white-space: #{$ws};
+    }
+  }
+}

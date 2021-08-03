@@ -2,9 +2,10 @@
 $color in $border-color {
 	.border-#{$border} {
 		border-color: #{$color};
+		&-hover:hover{
+			border-color: #{$color};
+		}
 	}
-
-	;
 }
 
 @each $loc in $borderLoc {
@@ -31,6 +32,10 @@ $color in $border-color {
 				.border{
 					border-style: solid;
 					border-width: #{$val};
+					&-hover:hover{
+						border-style: solid;
+						border-width: #{$val};
+					}
 				}
 			}
 		}

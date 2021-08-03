@@ -4,9 +4,8 @@ layout: ./app/layout.ejs
 engine: ejs
 current: index
 ---
-<section class="hero pos-relative d-flex justify-center items-center">
-      <div class="container">
-        <div class="pos-absolute text-right">
+<section class="hero d-flex justify-end items-center">
+        <div class="container w-100 text-right">
           <h2 class="text-secondary fs-5 fs-md-8 fs-sm-bs">
             Promise-Desert 2020 早春系列
           </h2>
@@ -14,39 +13,38 @@ current: index
             看得清，才能看得遠
           </h1>
         </div>
-      </div>
 </section>
 <section class="bg-index-light content--index">
   <div class="container text-center">
     <h2 class="text-secondary fw-bold fs-3 fs-md-6 fs-sm-7 mb-5 mb-md-4 mb-sm-2.5">用專業的心，做專業的事</h2>
     <div class="row">
-      <div class="col-3 col-md-6 col-sm-12">
+      <div class="col-3 col-md-6 col-sm-12 mb-sm-4">
         <span class="material-icons-outlined text-secondary icon--service mb-2">
           paid
           </span>
         <h3 class="fw-bold text-secondary fs-7 mb-1">單一價格</h3>
-        <p>無論任何度數皆不需追加費用即可擁有適合自己的薄型球面鏡片。</p>
+        <p class="text-sm-left">無論任何度數皆不需追加費用即可擁有適合自己的薄型球面鏡片。</p>
       </div>
-      <div class="col-3 col-md-6 col-sm-12">
+      <div class="col-3 col-md-6 col-sm-12 mb-sm-4">
         <span class="material-icons-outlined text-secondary icon--service mb-2">
           schedule
           </span>
         <h3 class="fw-bold text-secondary fs-7 mb-1">20 分鐘即可取件</h3>
-        <p>為了您的寶貴時間著想，以豐富專業知識與技術將結帳到交件的時間縮減至最快 20 分鐘即可完成。</p>
+        <p class="text-sm-left">為了您的寶貴時間著想，以豐富專業知識與技術將結帳到交件的時間縮減至最快 20 分鐘即可完成。</p>
       </div>
-      <div class="col-3 col-md-6 col-sm-12">
+      <div class="col-3 col-md-6 col-sm-12 mb-sm-4">
         <span class="material-icons-outlined text-secondary icon--service mb-2">
           favorite_border
           </span>
         <h3 class="fw-bold text-secondary fs-7 mb-1">安心售後服務</h3>
-        <p>我們提供長達 120 天的保固售後服務，不限會員資格皆享有免費深層保養及專業維修服務。</p>
+        <p class="text-sm-left">我們提供長達 120 天的保固售後服務，不限會員資格皆享有免費深層保養及專業維修服務。</p>
       </div>
       <div class="col-3 col-md-6 col-sm-12">
         <span class="material-icons-outlined text-secondary icon--service mb-2">
           voicemail
           </span>
         <h3 class="fw-bold text-secondary fs-7 mb-1">關於鏡片</h3>
-        <p>使用世界知名頂級品牌，抗UV、防汙鍍膜薄型非球面鏡片。</p>
+        <p class="text-sm-left">使用世界知名頂級品牌，抗UV、防汙鍍膜薄型非球面鏡片。</p>
       </div>
     </div>
   </div>
@@ -106,7 +104,7 @@ current: index
 </section>
 <section class="content--index co-branding-bg co-branding-bg-set">
   <div class="container">
-    <h2 class="text-white text-center fw-bold fs-6 fs-md-4 fs-sm-2.5 mb-5 mb-md-4 mb-sm-2.5">聯名設計鏡框</h2>
+    <h2 class="text-white text-center fw-bold fs-3 fs-md-6 fs-sm-8 mb-5 mb-md-4 mb-sm-2.5">聯名設計鏡框</h2>
     <div class="row">
       <div class="col-6 col-sm-12 mb-sm-2">
         <div class="co-branding co-branding-bg-set co-branding-product co-branding-product-img1">
@@ -208,7 +206,7 @@ current: index
           <label for="contact" class="d-block">意見反應</label>
           <textarea id="contact" placeholder="請輸入您的意見" name="userContact" class="w-100 border bg-transparent contact-input"></textarea>
         </li>
-        <li class="mb-5 d-flex justify-start items-center">
+        <li class="mb-5 d-flex justify-start items-center items-sm-start">
           <input type="checkbox" id="privacy" name="agreePrivacy" class="contact-input-checkbox">
           <label for="privacy" class="">我同意隱私權政策，並同意依隱私權政策中所述的方式處理自己的資料。</label>
         </li>
